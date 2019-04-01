@@ -1,0 +1,448 @@
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git config --global user.name "ArbazShaikh"
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git config --global user.email "arbazshaikh5138@gmail.com"
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git init
+Initialized empty Git repository in /home/aiktc/ArbazSk16CO54/EXP9/.git/
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ touch README.md
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git add README.md 
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git commit -m "Read Me file"
+[master (root-commit) 9b2b119] Read Me file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git remote add origin https://github.com/ArbazSk/Doctor_App.git
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git push origin master
+Username for 'https://github.com': ArbazSk
+Password for 'https://ArbazSk@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 219 bytes | 219.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ArbazSk/Doctor_App.git
+ * [new branch]      master -> master
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	test.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	test.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git add test.py 
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git commit -m "file"
+[master 726bb2d] file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 test.py
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git push origin master
+Username for 'https://github.com': ArbazSk
+Password for 'https://ArbazSk@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ArbazSk/Doctor_App.git
+   9b2b119..726bb2d  master -> master
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff
+diff --git a/test.py b/test.py
+index 45edb7a..6b4e952 100644
+--- a/test.py
++++ b/test.py
+@@ -1,2 +1,2 @@
+ import os
+-print("Hello F***g World")
+\ No newline at end of file
++print("Hello World")
+\ No newline at end of file
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff --staged
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git reset test.py
+Unstaged changes after reset:
+M	test.py
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff --staged
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff
+diff --git a/test.py b/test.py
+index 45edb7a..6b4e952 100644
+--- a/test.py
++++ b/test.py
+@@ -1,2 +1,2 @@
+ import os
+-print("Hello F***g World")
+\ No newline at end of file
++print("Hello World")
+\ No newline at end of file
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git log
+commit 726bb2d940f58e306094b7b9708b1b858e1ea947 (HEAD -> master, origin/master)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:56:35 2019 +0530
+
+    file
+
+commit 9b2b119aa17ff67f211d452bea9024c7deebbe20
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:54:40 2019 +0530
+
+    Read Me file
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git show
+commit 726bb2d940f58e306094b7b9708b1b858e1ea947 (HEAD -> master, origin/master)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:56:35 2019 +0530
+
+    file
+
+diff --git a/test.py b/test.py
+new file mode 100644
+index 0000000..45edb7a
+--- /dev/null
++++ b/test.py
+@@ -0,0 +1,2 @@
++import os
++print("Hello F***g World")
+\ No newline at end of file
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   test.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git add test.py 
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git commit -m "file"
+[master 1a6f0ac] file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git push origin master
+Username for 'https://github.com': ArbazSk
+Password for 'https://ArbazSk@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 305.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ArbazSk/Doctor_App.git
+   726bb2d..1a6f0ac  master -> master
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff --staged
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff --staged
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git add test.py 
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff --staged
+diff --git a/test.py b/test.py
+index 6b4e952..cd58b52 100644
+--- a/test.py
++++ b/test.py
+@@ -1,2 +1,8 @@
+ import os
+-print("Hello World")
+\ No newline at end of file
++print("Hello World")
++
++def new():
++    return "Yo Bro"
++
++
++new()
+\ No newline at end of file
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git branch test_branch
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git checkout test_branch 
+M	test.py
+Switched to branch 'test_branch'
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git status
+On branch test_branch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   test.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   test.py
+
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git dif
+git: 'dif' is not a git command. See 'git --help'.
+
+The most similar commands are
+	diff
+	config
+	difftool
+	init
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff
+diff --git a/test.py b/test.py
+index cd58b52..881edee 100644
+--- a/test.py
++++ b/test.py
+@@ -5,4 +5,8 @@ def new():
+     return "Yo Bro"
+ 
+ 
++def new_stage():
++    return 'new_stage'
++
++
+ new()
+\ No newline at end of file
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git checkout master
+M	test.py
+Switched to branch 'master'
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git diff
+diff --git a/test.py b/test.py
+index cd58b52..881edee 100644
+--- a/test.py
++++ b/test.py
+@@ -5,4 +5,8 @@ def new():
+     return "Yo Bro"
+ 
+ 
++def new_stage():
++    return 'new_stage'
++
++
+ new()
+\ No newline at end of file
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ cat >> test.py 
+^Z
+[1]+  Stopped                 cat >> test.py
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ cat > test.py 
+^Z
+[2]+  Stopped                 cat > test.py
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ cat  test.py 
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git checkout test_branch 
+M	test.py
+Switched to branch 'test_branch'
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git status
+On branch test_branch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   test.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   test.py
+
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git status
+On branch test_branch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   test.py
+
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git branch
+  master
+* test_branch
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git add .
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git commit -m "test file in test_branch"
+[test_branch bea5081] test file in test_branch
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git push origin master
+Username for 'https://github.com': ArbazSk
+Password for 'https://ArbazSk@github.com': 
+Everything up-to-date
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git push origin 
+fatal: The current branch test_branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test_branch
+
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git push origin test_branch
+Username for 'https://github.com': ArbazSk
+Password for 'https://ArbazSk@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 364 bytes | 364.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'test_branch' on GitHub by visiting:
+remote:      https://github.com/ArbazSk/Doctor_App/pull/new/test_branch
+remote: 
+To https://github.com/ArbazSk/Doctor_App.git
+ * [new branch]      test_branch -> test_branch
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git checkout
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git branch
+  master
+* test_branch
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git checkout master
+Switched to branch 'master'
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git branch
+* master
+  test_branch
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git merge test_branch 
+Updating 1a6f0ac..bea5081
+Fast-forward
+ test.py | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git status
+On branch master
+nothing to commit, working tree clean
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git log
+commit bea508176908f387a78a39af925ec6be662983df (HEAD -> master, origin/test_bracommit bea508176908f387a78a39af925ec6be662983df (HEAD -> master, origin/test_bra
+nch, test_branch)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:14:56 2019 +0530
+
+    test file in test_branch
+
+commit 1a6f0acd242289126e339691de9ded6f195eb4a5 (origin/master)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:00:52 2019 +0530
+
+    file
+
+commit 726bb2d940f58e306094b7b9708b1b858e1ea947
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:56:35 2019 +0530
+
+    file
+
+commit 9b2b119aa17ff67f211d452bea9024c7deebbe20
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:54:40 2019 +0530
+
+    Read Me file
+ ESCOD
+nch, test_branch)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:14:56 2019 +0530
+
+    test file in test_branch
+
+commit 1a6f0acd242289126e339691de9ded6f195eb4a5 (origin/master)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:00:52 2019 +0530
+
+    file
+
+commit 726bb2d940f58e306094b7b9708b1b858e1ea947
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:56:35 2019 +0530
+
+    file
+
+commit 9b2b119aa17ff67f211d452bea9024c7deebbe20
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:54:40 2019 +0530
+
+    Read Me file
+...skipping...
+nch, test_branch)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:14:56 2019 +0530
+
+    test file in test_branch
+
+commit 1a6f0acd242289126e339691de9ded6f195eb4a5 (origin/master)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:00:52 2019 +0530
+
+    file
+
+commit 726bb2d940f58e306094b7b9708b1b858e1ea947
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:56:35 2019 +0530
+
+    file
+
+commit 9b2b119aa17ff67f211d452bea9024c7deebbe20
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:54:40 2019 +0530
+
+    Read Me file
+...skipping...
+nch, test_branch)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:14:56 2019 +0530
+
+    test file in test_branch
+
+commit 1a6f0acd242289126e339691de9ded6f195eb4a5 (origin/master)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:00:52 2019 +0530
+
+    file
+
+commit 726bb2d940f58e306094b7b9708b1b858e1ea947
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:56:35 2019 +0530
+
+    file
+
+commit 9b2b119aa17ff67f211d452bea9024c7deebbe20
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:54:40 2019 +0530
+
+    Read Me file
+...skipping...
+nch, test_branch)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:14:56 2019 +0530
+
+    test file in test_branch
+
+commit 1a6f0acd242289126e339691de9ded6f195eb4a5 (origin/master)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:00:52 2019 +0530
+
+    file
+
+commit 726bb2d940f58e306094b7b9708b1b858e1ea947
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:56:35 2019 +0530
+
+    file
+
+commit 9b2b119aa17ff67f211d452bea9024c7deebbe20
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:54:40 2019 +0530
+
+    Read Me file
+...skipping...
+commit bea508176908f387a78a39af925ec6be662983df (HEAD -> master, origin/test_bra
+nch, test_branch)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:14:56 2019 +0530
+
+    test file in test_branch
+
+commit 1a6f0acd242289126e339691de9ded6f195eb4a5 (origin/master)
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 13:00:52 2019 +0530
+
+    file
+
+commit 726bb2d940f58e306094b7b9708b1b858e1ea947
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:56:35 2019 +0530
+
+    file
+
+commit 9b2b119aa17ff67f211d452bea9024c7deebbe20
+Author: ArbazShaikh <arbazshaikh5138@gmail.com>
+Date:   Mon Apr 1 12:54:40 2019 +0530
+
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git push origin master
+Username for 'https://github.com': ArbazSk
+Password for 'https://ArbazSk@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/ArbazSk/Doctor_App.git
+   1a6f0ac..bea5081  master -> master
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git branch -d test_branch 
+Deleted branch test_branch (was bea5081).
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ git branch
+* master
+aiktc@aiktc-OptiPlex-3046:~/ArbazSk16CO54/EXP9$ 
+
